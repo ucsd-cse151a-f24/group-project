@@ -31,7 +31,11 @@ ln -sf /expanse/lustre/projects/uci150/GROUPMEMBERUSERNAME
 >Note that you need to run the above instructions only once when accessing the Portal for the first time. 
 
 ## Jupyter
-Click on the "Jupyter" app. It will allow you to request a new Jupyter Session as shown below:
+Click on the "Jupyter" app. 
+
+![Jupyter Portal App](images/jupyter-icon.png "Jupyter Portal App")
+
+It will allow you to request a new Jupyter Session as shown below:
 
 ![Jupyter Session](images/jupyter-config.png "Jupyter Session")
 
