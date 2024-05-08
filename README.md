@@ -3,18 +3,24 @@
 ## Login to SDSC Expanse
 Go to `portal.expanse.sdsc.edu` and login with your "access-ci.org" or "ucsd.edu" credentials.
 
+<br>
+<br>
+
 ## Portal Navigation
 Once you are logged in, you will see the following SDSC Expanse Portal, along with several Pinned Apps. 
 
 ![Portal Navigation](images/portal-navigation.png "Portal Navigation")
 
 We will be working with the following apps:
-1. **Active Jobs**: To check jobs' status.
-2. **expanse Shell Acess**: To access Terminal.
-3. **Jupyter**: To setup Jupyter notebook and run JupyterLab.
+1. **expanse Shell Acess**: To access Terminal.
+2. **Jupyter**: To setup Jupyter notebook and run JupyterLab.
+3. **Active Jobs**: To check jobs' status.
 
-## First Time Login
-Click on the "expanse Shell Access" app. Once you are in terminal, please the following commands: 
+<br>
+<br>
+
+## First Time Login and expanse Shell Acess
+Click on the "expanse Shell Access" app in the SDSC Expanse Portal. Once you are in terminal, please the following commands: 
 ```bash
 # Create a new folder with your username and add symbolic link
 ln -sf /expanse/lustre/projects/uci150/$USER
@@ -30,8 +36,11 @@ ln -sf /expanse/lustre/projects/uci150/GROUPMEMBERUSERNAME
 ```
 >Note that you need to run the above instructions only once when accessing the Portal for the first time. 
 
+<br>
+<br>
+
 ## Jupyter
-Click on the "Jupyter" app. 
+Click on the "Jupyter" app in the SDSC Expanse Portal. 
 
 ![Jupyter Portal App](images/jupyter-icon.png "Jupyter Portal App")
 
@@ -62,15 +71,19 @@ Once you have filled out the above fields, go ahead and click "Submit".
 
 ![Jupyter Config](images/jupyter-config2.png "Jupyter Config")
 
+<br>
+<br>
 
-## JupyterLab
-After clicking "Submit", the SDSC Expanse Portal will put your request in a Queue. Based on the availability of resources, this might take some time. Once the request is processed, it will open a JupyterLab session. Here you can navigate around and create your own Python3 Jupyter notebooks. 
+### JupyterLab
+After clicking "Submit", the SDSC Expanse Portal will put your job request in a Queue. Based on the availability of resources, this might take some time. Once the request is processed, it will open a JupyterLab session. Here you can navigate around and create your own Python3 Jupyter notebooks. 
 
 ![JupyterLab](images/jupyterlab.png "JupyterLab")
 
+<br>
+<br>
 
 ### Spark Session Builder
-Based on the configurations provided in ![Jupyter](#jupyter), you need to update the following code:
+Based on the configurations provided in **Jupyter** above, you need to update the following code to build your `SparkSession`:
 ```py
 sc = SparkSession.builder \
     .config("spark.driver.memory", "8g") \
@@ -84,6 +97,18 @@ sc = SparkSession.builder \
 ![Spark Session](images/spark-session.png "Spark Session")
 
 Example Spark notebooks are available at `~/esolares/spark_notebooks`.
+
+<br>
+<br>
+
+## Active Jobs
+Click on the "Active Jobs" app in the SDSC Expanse Portal. Please use this when debugging anything. Note the Job Status and Reason. If the job was recently run and is dead, you will see the reason why it died under the Reason field. 
+
+![Active Jobs](images/active-jobs.png "Active Jobs")
+
+
+<br>
+<br>
 
 ## Support
 If you are having trouble, please submit a ticket to https://support.access-ci.org/.
