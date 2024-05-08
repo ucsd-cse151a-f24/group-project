@@ -55,9 +55,9 @@ You will need to fill out the following fields:
 
 - **Time limit (min)**: Enter an integer value denoting the number of minutes you want to work on your notebook environment.
 
-- **Number of cores**: Enter an integer value denoting the number of cores your pyspark session with need. Enter a value between 2 and 8.
+- **Number of cores**: Enter an integer value denoting the number of cores your pyspark session with need. Enter a value between `2` and `128`.
 
-- **Memory required per node (GB)**: Enter an integer value denoting the memory required per executor (worker nodes). Initially, start with a value of `2`, i.e., 2GB. You may increase it if you get issues where you need more than 2GB per executor in your Spark Session (Spark will let you know about the amount of RAM being too low when loading your datasets).
+- **Memory required per node (GB)**: Enter an integer value denoting the memory required per executor (worker nodes). Initially, start with a value of `2`, i.e., 2GB. You may increase it if you get issues where you need more than 2GB per executor in your Spark Session (Spark will let you know about the amount of RAM being too low when loading your datasets). The maximum value allowed is `250`, i.e., 250GB.
 
 - **Singularity Image File Location**: `~/esolares/spark_py_latest_jupyter_dsc232r.sif`
 
