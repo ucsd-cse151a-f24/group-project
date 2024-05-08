@@ -36,3 +36,33 @@
 
     <br>
     <br>
+
+3. **What is the maximum memory available?**
+
+    You have a total of 250GB of memory available.
+
+    <br>
+    <br>
+
+
+4. **What is the maximum number of executors available?**
+
+    You can have a maximum of 128 executors. 
+
+    <br>
+    <br>
+
+
+5. **Please provide an example SparkSession configuration.**
+
+    ```py
+    sc = SparkSession.builder \
+        .config("spark.driver.memory", "8g") \
+        .config("spark.executor.memory", "2g") \
+        .config('spark.executor.instances', 1) \
+        .getOrCreate()
+    ```
+    
+    <br>
+    <br>
+
