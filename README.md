@@ -117,6 +117,8 @@ Click on the "Active Jobs" app in the SDSC Expanse Portal. Please use this while
 ## FAQs
 ![FAQs](FAQs.md "FAQs")
 
+<br>
+<br>
 
 ## Support
 If you are having trouble, please submit a ticket to https://support.access-ci.org/.
