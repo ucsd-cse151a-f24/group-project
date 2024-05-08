@@ -57,7 +57,9 @@ You will need to fill out the following fields:
 
 - **Number of cores**: Enter an integer value denoting the number of cores your pyspark session with need. Enter a value between `2` and `128`.
 
-- **Memory required per node (GB)**: Enter an integer value denoting the memory required per executor (worker nodes). Initially, start with a value of `2`, i.e., 2GB. You may increase it if you get issues where you need more than 2GB per executor in your Spark Session (Spark will let you know about the amount of RAM being too low when loading your datasets). The maximum value allowed is `250`, i.e., 250GB.
+- **Memory required per node (GB)**: Enter an integer value denoting the total memory required. Initially, start with a value of `2`, i.e., 2GB. You may increase it if you get issues where you need more than 2GB per executor in your Spark Session (Spark will let you know about the amount of RAM being too low when loading your datasets). The maximum value allowed is `250`, i.e., 250GB. 
+
+  > For example, if you have 128GB of total memory and 8 cores, each core gets 128/8 = 16GB of memory.
 
 - **Singularity Image File Location**: `~/esolares/spark_py_latest_jupyter_dsc232r.sif`
 
@@ -83,16 +85,17 @@ After clicking "Submit", the SDSC Expanse Portal will put your job request in a 
 <br>
 
 ### 2.2. Spark Session Builder
-Based on the configurations provided in **Jupyter** above, you need to update the following code to build your `SparkSession`:
+Based on the configurations provided in **Jupyter** above, you need to update the following code to build your `SparkSession`. 
+> For example, if you have 128GB of total memory and 8 cores, each core gets 128/8 = 16GB of memory. The driver can take 1 or more cores and executors can take the remaining cores (7 or less).
 ```py
 sc = SparkSession.builder \
-    .config("spark.driver.memory", "8g") \
-    .config("spark.executor.memory", "2g") \
-    .config('spark.executor.instances', 1) \
+    .config("spark.driver.memory", "16g") \
+    .config("spark.executor.memory", "16g") \
+    .config('spark.executor.instances', 7) \
     .getOrCreate()
 ```
 
->Driver memory (i.e., the memory required by the master node) should be set to ≤ Number of cores * Memory required per node (GB). In other words, driver memory should be similar to the total executor memory.
+>Driver memory is the memory required by the master node. This can be similar to the executor memory as long as you are not sending a lot of data to the driver (i.e., running collect() or other heavy shuffle operation).
 
 ![Spark Session](images/spark-session.png "Spark Session")
 
