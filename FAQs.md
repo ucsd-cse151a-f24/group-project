@@ -2,7 +2,7 @@
 
 1. **How to create a Shared folder in SDSC server?**
 
-    You would need to create a shared folder inside of `uci150/$USER` and then, run: 
+    You would need to create a `shared` folder inside of `uci150/$USER` and then run: 
     ```shell
     chmod g+w shared
     ```
@@ -55,7 +55,11 @@
 
 5. **Please provide an example SparkSession configuration.**
 
-    If you have 128GB of total memory and 8 cores, each core gets 128/8 = 16GB of memory. The driver can take 1 or more cores and executors can take the remaining cores (7 or less).
+    Let us assume you defined the following Jupyter Session:
+    - **Number of cores**: `8`
+    - **Memory required per node (GB)**: `128`
+
+    This means you have 128GB of total memory and 8 cores. So, each core gets 128/8 = 16GB of memory. The driver can take 1 or more cores and executors can take the remaining cores (7 or less). So, we can define the SparkSession builder configuration as follows:
     ```py
     sc = SparkSession.builder \
         .config("spark.driver.memory", "16g") \
@@ -63,10 +67,7 @@
         .config('spark.executor.instances', 7) \
         .getOrCreate()
     ```
-    To achieve the above configuration, please define the following fields when defining the Jupyter Session:
-    - **Number of cores**: `8`
-    - **Memory required per node (GB)**: `128`.
-
+    
     <br>
     <br>
 
