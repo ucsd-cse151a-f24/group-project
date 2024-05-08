@@ -1,7 +1,7 @@
 # Group Project Information
 
 ## Login to SDSC Expanse
-Go to `portal.expanse.sdsc.edu` and login with your "access-ci.org" or "ucsd.edu" credentials.
+Go to [portal.expanse.sdsc.edu](portal.expanse.sdsc.edu) and login with your "access-ci.org" or "ucsd.edu" credentials.
 
 <br>
 <br>
