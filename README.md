@@ -70,13 +70,13 @@ After clicking "Submit", the SDSC Expanse Portal will put your request in a Queu
 
 
 ### Spark Session Builder
-Based on the configurations provided in ##Jupyter, you need to update the following code:
+Based on the configurations provided in ![Jupyter](#jupyter), you need to update the following code:
 ```py
 sc = SparkSession.builder \
     .config("spark.driver.memory", "8g") \
-	.config("spark.executor.memory", "2g") \
+    .config("spark.executor.memory", "2g") \
     .config('spark.executor.instances', 1) \
-	.getOrCreate()
+    .getOrCreate()
 ```
 
 >Driver memory (i.e., the memory required by the master node) should be set to ≤ Number of cores * Memory required per node (GB). In other words, driver memory should be similar to the total executor memory.
