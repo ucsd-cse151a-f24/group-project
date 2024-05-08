@@ -102,7 +102,7 @@ Example Spark notebooks are available at `~/esolares/spark_notebooks`.
 <br>
 
 ## 3. Active Jobs
-Click on the "Active Jobs" app in the SDSC Expanse Portal. Please use this when debugging anything. Note the Job Status and Reason. If the job was recently run and is dead, you will see the reason why it died under the Reason field. 
+Click on the "Active Jobs" app in the SDSC Expanse Portal. Please use this while debugging Spark jobs. Note the job `Status` and `Reason`. If the job was recently run and is dead, you will see the reason why it died under the `Reason` field. 
 
 ![Active Jobs](images/active-jobs.png "Active Jobs")
 
