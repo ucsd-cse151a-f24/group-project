@@ -20,8 +20,8 @@ We will be working with the following apps:
 <br>
 
 ## First Time Login and expanse Shell Acess
-Click on the "expanse Shell Access" app in the SDSC Expanse Portal. Once you are in terminal, please the following commands: 
-```bash
+Click on the "expanse Shell Access" app in the SDSC Expanse Portal. Once you are in the Terminal, please run the following commands: 
+```shell
 # Create a new folder with your username and add symbolic link
 ln -sf /expanse/lustre/projects/uci150/$USER
 
