@@ -19,7 +19,7 @@ We will be working with the following apps:
 <br>
 <br>
 
-## First Time Login and expanse Shell Acess
+## 1. expanse Shell Acess and First Time Login
 Click on the "expanse Shell Access" app in the SDSC Expanse Portal. Once you are in the Terminal, please run the following commands: 
 ```shell
 # Create a new folder with your username and add symbolic link
@@ -39,7 +39,7 @@ ln -sf /expanse/lustre/projects/uci150/GROUPMEMBERUSERNAME
 <br>
 <br>
 
-## Jupyter
+## 2. Jupyter
 Click on the "Jupyter" app in the SDSC Expanse Portal. 
 
 ![Jupyter Portal App](images/jupyter-icon.png "Jupyter Portal App")
@@ -74,7 +74,7 @@ Once you have filled out the above fields, go ahead and click "Submit".
 <br>
 <br>
 
-### JupyterLab
+### 2.1. JupyterLab
 After clicking "Submit", the SDSC Expanse Portal will put your job request in a Queue. Based on the availability of resources, this might take some time. Once the request is processed, it will open a JupyterLab session. Here you can navigate around and create your own Python3 Jupyter notebooks. 
 
 ![JupyterLab](images/jupyterlab.png "JupyterLab")
@@ -82,7 +82,7 @@ After clicking "Submit", the SDSC Expanse Portal will put your job request in a 
 <br>
 <br>
 
-### Spark Session Builder
+### 2.2. Spark Session Builder
 Based on the configurations provided in **Jupyter** above, you need to update the following code to build your `SparkSession`:
 ```py
 sc = SparkSession.builder \
@@ -101,7 +101,7 @@ Example Spark notebooks are available at `~/esolares/spark_notebooks`.
 <br>
 <br>
 
-## Active Jobs
+## 3. Active Jobs
 Click on the "Active Jobs" app in the SDSC Expanse Portal. Please use this when debugging anything. Note the Job Status and Reason. If the job was recently run and is dead, you will see the reason why it died under the Reason field. 
 
 ![Active Jobs](images/active-jobs.png "Active Jobs")
