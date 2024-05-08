@@ -55,11 +55,12 @@
 
 5. **Please provide an example SparkSession configuration.**
 
+    If you have 128GB of total memory and 8 cores, each core gets 128/8 = 16GB of memory. The driver can take 1 or more cores and executors can take the remaining cores (7 or less).
     ```py
     sc = SparkSession.builder \
-        .config("spark.driver.memory", "8g") \
-        .config("spark.executor.memory", "2g") \
-        .config('spark.executor.instances', 1) \
+        .config("spark.driver.memory", "16g") \
+        .config("spark.executor.memory", "16g") \
+        .config('spark.executor.instances', 7) \
         .getOrCreate()
     ```
     
