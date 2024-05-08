@@ -63,7 +63,10 @@
         .config('spark.executor.instances', 7) \
         .getOrCreate()
     ```
-    
+    To achieve the above configuration, please define the following fields when defining the Jupyter Session:
+    - **Number of cores**: `8`
+    - **Memory required per node (GB)**: `128`.
+
     <br>
     <br>
 
