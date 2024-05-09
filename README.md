@@ -115,7 +115,7 @@ Click on the "Active Jobs" app in the SDSC Expanse Portal. Please use this while
 
 
 ## FAQs
-![FAQs](FAQs.md "FAQs")
+[FAQs](FAQs.md "FAQs")
 
 <br>
 <br>
