@@ -61,7 +61,7 @@ You will need to fill out the following fields:
 
   > For example, if you have 128GB of total memory and 8 cores, each core gets 128/8 = 16GB of memory.
 
-- **Singularity Image File Location**: `~/esolares/spark_py_latest_jupyter_dsc232r.sif`
+- **Singularity Image File Location**: `~/esolares/tensorflow.2.16.1_jupyterlab.sif`
 
 - **Environment Modules to be loaded**: `singularitypro`
 
@@ -84,7 +84,24 @@ After clicking "Submit", the SDSC Expanse Portal will put your job request in a 
 <br>
 <br>
 
-### 2.2. Spark Session Builder
+### 2.2 JupyterLab environments
+Note that you will have access to various jupyterlab notebook environments that give you access to other things such as scipy, tensorflow and pytorch as well as yolov8.
+Here are the list of notebook files in `~/uci150/esolares/*.sif`
+```
+# tf 2.16.1 + jupyterlab
+~/uci150/esolares/tensorflow.2.16.1_jupyterlab.sif
+
+# torch 2.2.2 CUDA 12.1 + jupyterlab
+~/uci150/esolares/pytorch2.2.2cuda12.1_jupyterlab.sif
+
+# spark 3.5.0 + jupyterlab
+~/uci150/esolares/spark_py_latest_jupyter.sif
+
+# yolov8 + torch 2.2.2 CUDA 12.1 + jupyterlab
+~/uci150/esolares/yolov8pytorch2.2.2cuda12.1_jupyterlab.sif
+```
+
+### 2.2.optional Spark Session Builder
 Based on the configurations provided in **Jupyter** above, you need to update the following code to build your `SparkSession`. 
 > For example, if you have 128GB of total memory and 8 cores, each core gets 128/8 = 16GB of memory. The driver can take 1 or more cores and executors can take the remaining cores (7 or less).
 ```py
