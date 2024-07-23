@@ -15,7 +15,7 @@ If you are logging in to Expanse for the first time, there are some extra steps 
 Make sure you select the University of California San Diego choice as seen in the image
 3. After you log in through UCSD, it will ask you to link an account, the page should look like this:
 ![Linking](images/linking.png)
-Choose the option that says **ACCESS CI**
+Choose the option that says "link an identity with **ACCESS CI**"
 4. This will take you to the Access log in page
 ![Login](images/login.png)
 If you have Access credentials already, use that to log in. However, since you probably have it set up that you logged in through UCSD credentials, you may not currently have a password set up for Access. If that is the case, click "forgot password" and follow the process to reset the password. **Note:** It will also have you set up the Duo connection in some form, be prepared for that
