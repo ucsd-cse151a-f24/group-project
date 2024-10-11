@@ -3,7 +3,7 @@
 ## Login to SDSC Expanse
 Go to [portal.expanse.sdsc.edu](portal.expanse.sdsc.edu) and login with your "ucsd.edu" credentials (2), **Note: if this is your first time, you will need to link your NSF ACCESS "access-ci.org" credentials (3)**
 
-### PLEASE READ THE DIRECTIONS THROUGHOLY so you do not have issues!!!
+### PLEASE READ THE DIRECTIONS THOROUGHLY so you do not have issues!!!
 
 <br>
 <br>
@@ -12,17 +12,38 @@ Go to [portal.expanse.sdsc.edu](portal.expanse.sdsc.edu) and login with your "uc
 If you are logging in to Expanse for the first time, there are some extra steps you have to take to log in.
 
 1. Make sure you have a NSF Access ID set up (this is taken care of by the professor if you have filled out the proper forms)
+   
+<br>
+<br>
+
 2. Go to [portal.expanse.sdsc.edu](portal.expanse.sdsc.edu) and you will most likely see the following screen
 ![First page](images/first-page.png)
 Make sure you select the University of California San Diego choice as seen in the image
+
+<br>
+<br>
+
 3. After you log in through UCSD, it will ask you to link an account, the page should look like this:
 ![Linking](images/linking.png)
 Choose the option that says "link an identity with **ACCESS CI**"
+
+**NOTE: If you do not do this, you will NOT have access to SDSC**
+
+<br>
+<br>
+
 4. This will take you to the Access log in page
 ![Login](images/login.png)
 If you have Access credentials already, use that to log in. However, since you probably have it set up that you logged in through UCSD credentials, you may not currently have a password set up for Access. If that is the case, click "forgot password" and follow the process to reset the password. **Note:** It will also have you set up the Duo connection in some form, be prepared for that
+
+<br>
+<br>
+
 5. This should lead to your account being connected. If you see the following page, you should be good to go!
 ![Complete](images/connected.png)
+
+<br>
+<br>
 
 ## Portal Navigation
 Once you are logged in, you will see the following SDSC Expanse Portal, along with several Pinned Apps. 
